@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Ruby & React Project</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1><%= "Hello #{user_name}!!" %></h1>
+    <nav>
+      <div class="nav-bar">
+        <ul>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Login/Register", login_path %></li>
+          <li><%= link_to "Shoes", shoes_path %></li>
+          <li><%= link_to "Logout", log_out_path %></li>
+        </ul>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    # <script>
+    #   # Initialize Firebase
+    #   var config = {
+    #     apiKey: "AIzaSyCHBtLEMr33TC0JLhigZEpoHyRgTeVO8rU",
+    #     authDomain: "my-ruby-and-react-app.firebaseapp.com",
+    #     databaseURL: "https://my-ruby-and-react-app.firebaseio.com",
+    #     projectId: "my-ruby-and-react-app",
+    #     storageBucket: "my-ruby-and-react-app.appspot.com",
+    #     messagingSenderId: "161765509483"
+    #   };
+    #   firebase.initializeApp(config);
+    # </script>
+  </body>
+</html>

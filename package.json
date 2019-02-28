@@ -1,0 +1,20 @@
+{
+  "name": "my_ruby_project",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wp": "webpack",
+    "serv": "webpack-dev-server --hot",
+    "db": "json-server ./build/db.json"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-install": "2.1.0",
+    "babel-loader": "^8.0.4",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

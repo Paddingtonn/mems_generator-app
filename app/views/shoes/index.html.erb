@@ -1,0 +1,12 @@
+<% if @deleted_shoe %>
+    <h2><%= @deleted_shoe.original_filename %> Your shoe was succesfully deleted</h2>
+<% end %>
+
+<%= link_to('upload a new shoe', new_shoe_path) %>
+
+<% @pictures_list.each do |shoe|  %>
+    <ul>
+        <li><%= shoe.title %><% link_to(shoe.original_filename, shoe_path(shoe)) %><img src="<%= shoe.thumbnail_filename %>" /> 
+        <%= link_to('delete me', shoe_path(shoe), method: :delete) %></li>
+    </ul>
+<% end %>
